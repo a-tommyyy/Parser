@@ -1,6 +1,10 @@
-require "parser/version"
+require_relative "parser/version"
+require_relative "parser/context"
+require_relative "parser/control"
+require_relative "parser/define"
+require_relative "parser/runner"
 
-Parse.extend(Parser::Define)
+Parser.extend(Parser::Define)
 
 module Parser
   def self.run(row, &block)

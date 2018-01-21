@@ -4,5 +4,6 @@ module Parser::Define
     context = Parser::Context.new(control)
     # 個々の処理がわからない
     context.instance_eval(&block)
+    control
   end
 end
